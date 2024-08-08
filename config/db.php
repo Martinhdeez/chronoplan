@@ -11,9 +11,7 @@ class DB{
         $this->conn = null;
         try{
             $this->conn = new PDO(
-                "mysql:
-                host = $this->servername;
-                dbname = $this->dbname",
+                "mysql:host=$this->servername;dbname=$this->dbname",
                 $this->username,
                 $this->password
             );

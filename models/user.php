@@ -30,6 +30,7 @@ class User{
         $check_sql = "SELECT * FROM ".$this->table." WHERE username = ?";
         $check_stmt = $this->conn->prepare($check_sql);
         $check_stmt->execute([$this->username]);
+        
         if($check_stmt->rowCount() > 0) {
             return "This username already exists.";
         }
